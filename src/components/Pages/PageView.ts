@@ -74,9 +74,11 @@ import {
   onExperimentDefinitionChange,
 } from "../../utils/experiments.ts";
 import { triggerRemeasureLV } from "../../utils/Lyrics/LyricsVirtualizer.ts";
+import { observeMetadataMarquees } from "../../utils/MetadataMarquee.ts";
 
 const pageLogger = new Logger("Page View");
 const controlsLogger = new Logger("View Controls");
+let cleanupMetadataMarquees: (() => void) | null = null;
 
 interface TippyInstance {
   destroy: () => void;
@@ -281,6 +283,7 @@ async function OpenPage(
 
   
   PageContainer = elem;
+  cleanupMetadataMarquees = observeMetadataMarquees(elem);
 
   if (!$skipSpicyFont.get()) {
     elem.classList.add("UseSpicyFont");
@@ -448,6 +451,8 @@ async function DestroyPage() {
   CleanupScrollEvents();
   PageResizeListener?.disconnect(); // Disconnect the observer
   PageResizeListener = null;
+  cleanupMetadataMarquees?.();
+  cleanupMetadataMarquees = null;
   $lyricsContainerExists.set(false);
   DestroyAllLyricsContainers();
   CleanUpIsByCommunity();

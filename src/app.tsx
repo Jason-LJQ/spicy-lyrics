@@ -140,21 +140,6 @@ async function main() {
             }
         }
 
-        @keyframes Marquee_SongName {
-          0% {
-            transform: translateX(calc(0px + min(-100% + 86cqw, 0px) * 0));
-          }
-          10% {
-            transform: translateX(calc(0px + min(-100% + 86cqw, 0px) * 0));
-          }
-          90% {
-            transform: translateX(calc(0px + min(-100% + 86cqw, 0px) * 1));
-          }
-          100% {
-            transform: translateX(calc(0px + min(-100% + 86cqw, 0px) * 1));
-          }
-        }
-
         @keyframes Marquee_SongName_SongMoreInfo {
           0% {
             transform: translateX(calc(0px + min(-100% + 98cqw, 0px) * 0));
@@ -170,21 +155,6 @@ async function main() {
           }
         }
 
-        @keyframes Marquee_Artists {
-          0% {
-            transform: translateX(calc(0px + min(-100% + 81cqw, 0px) * 0));
-          }
-          10% {
-            transform: translateX(calc(0px + min(-100% + 81cqw, 0px) * 0));
-          }
-          90% {
-            transform: translateX(calc(0px + min(-100% + 81cqw, 0px) * 1));
-          }
-          100% {
-            transform: translateX(calc(0px + min(-100% + 81cqw, 0px) * 1));
-          }
-        }
-
         @keyframes Marquee_Artists_SongMoreInfo {
           0% {
             transform: translateX(calc(0px + min(-100% + 98cqw, 0px) * 0));
@@ -197,36 +167,6 @@ async function main() {
           }
           100% {
             transform: translateX(calc(0px + min(-100% + 98cqw, 0px) * 1));
-          }
-        }
-
-        @keyframes Marquee_SongName_Compact {
-          0% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 0));
-          }
-          10% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 0));
-          }
-          90% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 1));
-          }
-          100% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 1));
-          }
-        }
-
-        @keyframes Marquee_Artists_Compact {
-          0% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 0));
-          }
-          10% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 0));
-          }
-          90% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 1));
-          }
-          100% {
-            transform: translateX(calc(0px + min(-100% + 100cqw, 0px) * 1));
           }
         }
 
